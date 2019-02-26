@@ -51,3 +51,17 @@ update ofertas set ciudad = "remota" where id = 8;
 update ofertas set ciudad = "Madrid", publicada = 0 where id = 8;
 
 update ofertas set salario = 20000 where ciudad not like "madrid" and salario = 0;
+
+delete from empresas where id = 5;
+
+select count(*) from empresas;
+
+select avg(salario) from ofertas;
+
+select max(salario) from ofertas;
+
+select empresa_id, avg(salario) from ofertas group by empresa_id;
+
+select nombre, apellidos, titulo from ofertas o inner join ofertas_usuarios on o.id = oferta_id
+inner join usuarios u on usuario_id = u.id;
+

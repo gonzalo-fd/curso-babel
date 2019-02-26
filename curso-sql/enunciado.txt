@@ -1,0 +1,15 @@
+restaurante:
+
+1 pedido por usuario, marcar si pedido pagado o no
+pedido; primeros, segundos, bebida, postres... cada plato de un tipo
+precio, nombre, descripcion
+cada vez que pides un plato se puede añadir una nota(por ejemplo sin gambas)
+
+tablas: pedido, platos(includio bebida), clientes, categorias/tipos plato
+
+el camarero de cada pedido se asigna de que platos se va a ocupar dentro de ese pedido
+cada plato se puede asignar a una persona distinta(camarero)
+cada plato del pedido tiene un estado en espera(nadie lo tiene asigando), cocinando, cocinado, en camino, entregado...
+
+no todo el mundo puede cambiar de estado un plato, cada estado lo puede modificar solo un rol, 
+por ejemplo solo el cocinero lo puede marcar como cocinando
