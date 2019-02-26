@@ -1,0 +1,92 @@
+*{
+    color: blue;
+}
+
+h2, h3{
+    color: yellow;
+}
+
+div > p{
+    font-style: italic;
+}
+
+div p{
+    font-weight: bold;
+}
+
+.titulo, .subtitulo{
+    text-decoration: underline;
+}
+
+#titulop{
+    border: 1px solid black;
+}
+
+label + input{
+    width: 400px;
+}
+
+label ~ input{
+    height: 50px;
+}
+
+input[required]{
+    border: 1px dashed orange;
+}
+a[href="www.babel.es"]{
+    color: green;
+}
+
+/* a[href$=".es"] {
+    text-decoration: none;
+} */
+
+a[href^="http"]{
+    text-decoration: line-through;
+}
+
+h1:not(.subtitulo){
+    text-decoration: line-through;
+}
+
+a[href*="b"]{
+    font-size: 20px;
+}
+
+a[href*=".es"] [target]{
+    color:rgb(140, 199, 44);
+}
+
+body{
+    background-color: cornflowerblue;
+}
+div.opacidad{
+    /* background-color:rgb(0,0,0,0.5); */
+    /* opacity: 0.3; */
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: 20px 50px 10px 20px orange;
+    border-radius: 5%;
+    background: linear-gradient(to right, red, yellow);
+}
+
+/* overflow: scroll/hidden */
+
+/* span{
+    display: block;
+} */
+
+div#enlinea{
+    display: block;
+}
+
+body {
+    background-image: url(a.jpeg);
+}
+
+div#asdf{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    transform: skew(29deg) rotate(57deg);
+}

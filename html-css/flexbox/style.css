@@ -1,0 +1,28 @@
+div#padre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    width: 50%;
+    height: 700px;
+    flex-wrap: wrap; /*no forzar todos los elementos en la misma linea si no entran (hijo 4 abajo)*/
+}
+
+div.hijo {
+    background-color: rgb(102, 93, 233);
+    width: 200px;
+    height: 250px;
+    border: 1px solid black;
+    order: 2;
+}
+div.hijo5{
+    height: 350px;
+    background-color: red;
+}
+div.hijo3{
+    order: 1;
+    align-self: flex-start;
+    justify-self: flex-end;
+}

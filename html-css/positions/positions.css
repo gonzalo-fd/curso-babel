@@ -1,0 +1,30 @@
+div.rel1{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+
+    div.rel2{
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+        position: relative;
+        top: 800px;
+    }
+
+    div.cont{
+        position: absolute;
+        left: 500px;
+        border: 1px solid yellow;
+    }
+
+    header{
+        position: static;
+        top: 50px;
+    }
+
+
+
