@@ -52,8 +52,9 @@ DELETE FROM empleados WHERE departamento = 4;
 -- 2.19. Despedir a todos los empleados que trabajen para departamentos cuyo presupuesto sea superior a los 60.000 €.
 -- NO FUNCIONA
 DELETE FROM empleados WHERE dni in (
-select dni from departamento d join empleados e on d.codigo = e.departamento
+select asdf from(
+select dni as asdf from departamento d join empleados e on d.codigo = e.departamento
 where presupuesto > 600
-);
+));
 -- 2.20. Despedir a todos los empleados.
 DELETE FROM empleados;
