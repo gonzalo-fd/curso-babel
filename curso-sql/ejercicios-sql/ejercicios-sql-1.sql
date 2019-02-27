@@ -3,6 +3,7 @@ INSERT INTO fabricantes (nombre) VALUES
 INSERT INTO articulos (codigo, nombre, precio, fabricante) VALUES
 ("1", "anillo unico", 757, "1"), ("2", "papas", 45, "2"),  ("3","narsil", 300, "3"),  ("4","mi arco", 50, "4"), ("5","segundo desayuno", 10, "5"),  
 ("6","pan lembas", 20, "6"), ("7","mi hacha", 100, "7"), ("8","tumba", 1, "8"), ("9","blanco", 444, "9");
+INSERT INTO articulos (codigo, nombre, precio, fabricante) VALUES ("10","gris", 555, "9");
 
 -- 1.1. Obtener los nombres y los precios de los productos de la tienda. 
 select nombre, precio from articulos;
@@ -31,10 +32,18 @@ select avg(precio), f.nombre from articulos a join fabricantes f on a.fabricante
 -- 1.13. Obtener los nombres de los fabricantes que ofrezcan productos cuyo precio medio sea mayor o igual a 150 €.
 select f.nombre from articulos a join fabricantes f on a.fabricante = f.codigo where precio >= 150;
 -- 1.14. Obtener el nombre y precio del artículo más barato.
-select nombre, min(precio) from articulos group by precio asc;
+select nombre, precio from articulos order by precio asc limit 1;
+select a.nombre, a.precio from articulos a where a.precio = (select min(b.precio) from articulos b);
 -- 1.15. Obtener una lista con el nombre y precio de los artículos más caros de cada proveedor (incluyendo el nombre del proveedor).
+select a.nombre, a.precio, f.nombre from articulos a join fabricantes f on a.fabricante = f.codigo
+group by f.nombre having max(a.precio); -- no funciona
+
 -- 1.16. Añadir un nuevo producto: Altavoces de 70 € (del fabricante 2). 
--- 1.17. Cambiar el nombre del producto 8 a 'Impresora Laser'. 
--- 1.18. Aplicar un descuento del 10 % (multiplicar el precio por 0'9) a todos los productos. 
+insert into articulos (nombre, precio, fabricante) values ("altavoces", 70, 2);
+-- 1.17. Cambiar el nombre del producto 8 a 'Impresora Laser'.
+update articulos set nombre = "impresora laser" where codigo = 8;
+-- 1.18. Aplicar un descuento del 10 % (multiplicar el precio por 0'9) a todos los productos.
+update articulos set precio = precio *0.9;
 -- 1.19. Aplicar un descuento de 10 € a todos los productos cuyo precio sea mayor o igual a 120 €.
+update articulos set precio = precio - 10 where precio >= 120;
 
