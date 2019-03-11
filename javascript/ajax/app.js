@@ -49,7 +49,15 @@ function getPeliculasProm(genero) {
 //getGenerosProm()
 function start(){
    return new Promise((resolve, reject) => {
-    setTimeout(() => {
+    setTimeout(() => {function findOdd(A) {
+let array = [];
+  for(let i = 0; i < A.lenght; i++){
+   //var coche = {"color":"rojo","marca":"seat","modelo":"leon"};
+   //var coche = {color:"rojo",CV:100,AC:true};
+   array[A[i]]++;
+  }
+  return 0;
+}
         resolve('Mi promesa funciona');
         reject('Mi promesa no funciona');
     }, 3000)
