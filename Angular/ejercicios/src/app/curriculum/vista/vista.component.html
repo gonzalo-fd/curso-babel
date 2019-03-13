@@ -1,0 +1,10 @@
+<div>
+<h2> {{ nombre }} {{ apellidos }}</h2>
+<p>Email: {{ email }}</p>
+<p>Fecha de nacimiento: {{ fecha }}</p>
+<p>{{ imagen }}</p>
+<p>Skills: </p>
+<ul>
+    <li *ngFor="let i of skill"> {{i}}</li>
+  </ul>
+</div>

@@ -1,0 +1,8 @@
+<h1>Ejercicio 1</h1>
+
+<input type="text" #input placeholder="texto">
+<input type="text" #input1 placeholder="A sustituir">
+<input type="text" #input2 placeholder="Sustitucion">
+<input type="text" #input3 placeholder="eliminar">
+<button type="button" (click)="guardar(input.value)" (click)="sustituir(input1.value)" (click)="sustitucion(input2.value)" (click)="eliminar(input3.value)">transform</button>
+<p> Texto: {{ texto | miFiltro:aSustituir:sust:elim }}</p>

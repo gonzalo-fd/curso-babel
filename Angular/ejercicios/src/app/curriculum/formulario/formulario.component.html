@@ -1,0 +1,12 @@
+<div>
+<input type="text" #nombre placeholder="Nombre" (input)="aNombre($event.target.value)">
+<input type="text" #apellidos placeholder="Apellidos" (input)="aApellidos($event.target.value)">
+<input type="date" #fecha placeholder="Fecha de nacimiento" (input)="aFecha($event.target.value)">
+<input type="string" #email placeholder="Email" (input)="aEmail($event.target.value)">
+<input type="file" src="./assets/images.png" #imagen placeholder="Imagen" (input)="aImagen($event.target.value)">
+<input type="text" #skill placeholder="Skills">
+<button type="button" (click)="aSkills(skill.value)">+</button>
+<!-- <button type="button" (click)="aNombre(nombre.value)" (click)="aApellidos(apellidos.value)" (click)="aFecha(fecha.value)" (click)="aImagen(imagen.value)" 
+(click)="aSkills(skill.value)">Submit</button> -->
+</div>
+<!-- (click)="aImagen(imagen.value)"  -->

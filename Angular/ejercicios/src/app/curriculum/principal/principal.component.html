@@ -1,0 +1,6 @@
+<h1>Mi CV interactivo</h1>
+<div>
+<app-formulario (nombre)="nombre=$event" (apellidos)="apellidos=$event" (email)="email=$event" 
+(imagen)="imagen=$event" (fecha)="fecha=$event" (skill)="skill=$event"></app-formulario>
+<app-vista [nombre]="nombre" [apellidos]="apellidos" [email]="email" [fecha]="fecha" [skill]="skill"></app-vista>
+</div>
