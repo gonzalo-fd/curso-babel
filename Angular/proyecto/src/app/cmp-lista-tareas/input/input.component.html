@@ -1,0 +1,11 @@
+<h1>Tareas</h1>
+<ul>
+    <li *ngFor="let i of tareas" >
+      <span [ngClass]="{i.completa: tachado}" > {{i.nombre}}</span>
+    </li>
+  </ul>
+<h2>Agregar tarea</h2>
+<input type="text" #tarea>
+<button type="button" (click)=agregarTarea(tarea)>Agregar</button>
+<button type="button" (click)=setCompleta(tarea)>Completar</button>
+<button type="button" (click)=eliminarTarea(tarea)>Eliminar</button>

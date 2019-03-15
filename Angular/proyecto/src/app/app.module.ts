@@ -13,6 +13,10 @@ import { FiltroPipe } from './cmp-pipes/filtro.pipe';
 import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
 import { MarcarDirective } from './cmp-directivas/marcar.directive';
 import { MiElseDirective } from './cmp-directivas/mi-else.directive';
+import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
+import { CmpAComponent } from './cmp-servicios/cmp-a/cmp-a.component';
+import { CmpBComponent } from './cmp-servicios/cmp-b/cmp-b.component';
+import { InputComponent } from './cmp-lista-tareas/input/input.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { MiElseDirective } from './cmp-directivas/mi-else.directive';
     CmpDirectivasComponent,
     MarcarDirective,
     MiElseDirective,
+    CmpServiciosComponent,
+    CmpAComponent,
+    CmpBComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule, FormsModule
