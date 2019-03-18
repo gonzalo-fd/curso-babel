@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,9 @@ import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
 import { CmpAComponent } from './cmp-servicios/cmp-a/cmp-a.component';
 import { CmpBComponent } from './cmp-servicios/cmp-b/cmp-b.component';
 import { InputComponent } from './cmp-lista-tareas/input/input.component';
+import { CmpFormulariosComponent } from './cmp-formularios/cmp-formularios.component';
+import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reactivo.component';
+import { FormPlantillaComponent } from './cmp-formularios/form-plantilla/form-plantilla.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +38,12 @@ import { InputComponent } from './cmp-lista-tareas/input/input.component';
     CmpAComponent,
     CmpBComponent,
     InputComponent,
+    CmpFormulariosComponent,
+    FormReactivoComponent,
+    FormPlantillaComponent,
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

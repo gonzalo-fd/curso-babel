@@ -1,7 +1,6 @@
 <h1>Tareas</h1>
 <ul>
-    <li *ngFor="let i of tareas" >
-      <span [ngClass]="{i.completa: tachado}" > {{i.nombre}}</span>
+    <li *ngFor="let i of tareas" [ngClass]="{tachado: i.completa}">{{i.nombre}}
     </li>
   </ul>
 <h2>Agregar tarea</h2>

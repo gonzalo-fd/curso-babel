@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from './datos.service';
+import {FormGroup, FormControl, Validators, FormArray, FormBuilder} from '@angular/forms'
 
 
 @Component({
@@ -8,16 +9,27 @@ import { DatosService } from './datos.service';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-
-  constructor(private datosService: DatosService) { }
+  miForm: FormGroup;
+  constructor(private datosService: DatosService, private formBuilder: FormBuilder) { }
   tareas=[];
   ngOnInit() {
     this.tareas= this.datosService.getTareas();
+    this.initForm();
   }
 
-  agregarTarea(tarea: HTMLInputElement){
-    this.datosService.setTarea(tarea.value);
-    tarea.value="";
+  private initForm(){
+    this.tareas= this.datosService.getTareas();
+    this.miForm =  this.formBuilder.group({
+      tarea:  this.formBuilder.array([this.formBuilder.control("", [Validators.required])])
+    });
+  
+  }
+
+  agregarTarea(): void{
+    //  this.datosService.setTarea(tarea);
+    //   tarea.value="";
+    const nombreTarea = this.miForm.controls.value.tarea;
+    this.datosService.setTarea(nombreTarea);
     }
   setCompleta(tarea: HTMLInputElement){
     this.datosService.setCompleta(tarea.value);

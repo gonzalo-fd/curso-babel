@@ -20,11 +20,10 @@ export class DatosService {
     console.log(this.tareas);
   }
   setCompleta(tarea: string){
-    let t =this.tareas.find(function(tarea) {
-      return tarea;
-    });
-    t.completa = !t.completa;
-    console.log(this.tareas);
+    for (let i = 0; i < this.tareas.length; i++) {
+      if(this.tareas[i].nombre == tarea)
+        this.tareas[i].completa = !this.tareas[i].completa;
+    }
   }
   eliminarTarea(tarea: string){
     for (let i = 0; i < this.tareas.length; i++) {
