@@ -1,0 +1,15 @@
+<ul>
+      <li>UserId: {{post.userId}}</li>
+      <li>id: {{post.id}}</li>
+      <li>title: {{post.title}}</li>
+      <li>User name: {{user.name}}</li>
+</ul>
+
+<button type="button" (click)=cambiarMostrar() >Ver</button>
+<div *ngIf="mostrar">
+<div *ngFor="let c of post.comments, let i = index">
+    <li>
+    comment {{i}}: {{c.body}}
+  </li>
+    </div>
+</div>
