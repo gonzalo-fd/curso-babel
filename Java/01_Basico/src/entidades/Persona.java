@@ -1,6 +1,6 @@
 package entidades;
 
-public class Persona {
+public class Persona implements Comparable<Persona>{
 
     private String nombre;
     private double altura;
@@ -46,5 +46,9 @@ public class Persona {
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
-    
+
+	@Override
+	public int compareTo(Persona p) {
+		return this.edad - p.edad;
+	}
 }
