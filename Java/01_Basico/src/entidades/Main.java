@@ -1,6 +1,6 @@
 package entidades;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,6 +20,12 @@ public class main {
 		
 		Casa casa = new Casa(500000, dir, p1, true, arrHab, arrPer);
 		System.out.println(casa);
+		
+		Main main = new Main();
+		main.saludar();
 	}
-
+	
+	public void saludar() {
+		System.out.println("hola caracola");
+	}
 }
