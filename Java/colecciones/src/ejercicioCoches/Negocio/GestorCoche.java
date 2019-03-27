@@ -19,7 +19,7 @@ public class GestorCoche {
 		this.lista = lista;
 	}
 
-	public boolean add(Coche c) {
+	public boolean add(Coche c) {//deberia devolver errores
 		
 		if(c.getMatricula().length() != 7 || lista.contains(c.getMatricula()))
 			return false;
