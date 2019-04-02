@@ -7,9 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>beans.xml</config>
-		<config>beans2.xml</config>
-		<config>src/main/java/beans6.xml</config>
+		<config>target/beans.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

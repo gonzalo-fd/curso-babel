@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="persona" class="Spring6.Persona" autowire="byType">
+	<property name="nombre" value="Nicolas"></property>
+	<property name="edad" value="55"></property>
+	<property name="peso" value="80"></property>
+	</bean>
+	<bean id="direccion" class="Spring6.Direccion">
+	<property name="nombreVia" value="Nicolas"></property>
+	<property name="tipoVia" value="meh"></property>
+	<property name="codigoP" value="28224"></property>
+	</bean>
+</beans>

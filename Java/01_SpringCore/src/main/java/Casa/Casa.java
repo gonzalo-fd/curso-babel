@@ -3,6 +3,8 @@ package Casa;
 import java.util.Arrays;
 import java.util.List;
 
+import Spring6.Persona;
+
 public class Casa {
 
 	private double precio;

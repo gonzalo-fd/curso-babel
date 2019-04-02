@@ -1,16 +1,18 @@
-package Casa;
+package Spring6;
+
+import Casa.Direccion;
 
 public class Persona {
 
 	private String nombre;
-	private double altura;
+	private double peso;
 	private int edad;
 	private Direccion direccion;
 	
 	public static int numeroPersona;
 	
 	public Persona(String n,double a,int e,Direccion d) {
-		this.altura = a;
+		this.peso = a;
 		this.nombre = n;
 		this.edad = e;
 		this.direccion = d;
@@ -34,17 +36,17 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", altura=" + altura + ", edad=" + edad + ", direccion=" + direccion + "]";
+		return "Persona [nombre=" + nombre + ", peso=" + peso + ", edad=" + edad + ", direccion=" + direccion + "]";
 	}
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public double getAltura() {
-		return altura;
+	public double getPeso() {
+		return peso;
 	}
-	public void setAltura(double altura) {
-		this.altura = altura;
+	public void setPeso(double altura) {
+		this.peso = altura;
 	}
 	public int getEdad() {
 		return edad;
