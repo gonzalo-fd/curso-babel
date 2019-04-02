@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Scopes, o alcances, en spring tenemos 4 tipos de alcance
+		Singleton, el objeto es unico para toda la aplicación
+		Prototype, el objeto es prototipado y clonado cada vez que se le requiera
+		ojo, matiz, los objetos prototipados no son gestionados directamente por spring,
+		es decir, su ciclo de vida dependera de nosotros
+		Request, 
+		Session, los veremos mas adelante
+	 -->
+	 
+	 <bean id="personaBean" class="spring3.Persona" scope="prototype"></bean>
+	 
+	 <!-- Si no pondemos scope, el alcance por defecto es singleton -->
+	 <!-- Cuando un objeto depende de otro objeto podemos hacer inners bean,
+	 es decir, crear un objeto nuevo donde inyectarle a la persona -->
+	 <bean id="carlos" class="spring3.Persona" scope="singleton">
+	 	<property name="nombre" value="Carlos"></property>
+	 	<property name="edad" value="45"></property>
+	 	<property name="peso" value="75.5"></property>
+	 	<property name="direccion">
+	 		<bean class="spring3.Direccion">
+	 			<property name="nombreVia" value="Gran via"></property>
+	 			<property name="tipoVia" value="Calle"></property>
+	 			<property name="cp" value="28045"></property>
+	 		</bean>
+	 	</property>
+	 </bean>
+	 
+	 <bean id="direccionLaura" class="spring3.Direccion">
+	 	<property name="nombreVia" value="Ensanche de Vallecas"></property>
+	 	<property name="tipoVia" value="Avenida"></property>
+	 	<property name="cp" value="28051"></property>
+	 </bean>
+	 
+	 <bean id="laura" class="spring3.Persona" scope="singleton">
+	 	<property name="nombre" value="Carlos"></property>
+	 	<property name="edad" value="45"></property>
+	 	<property name="peso" value="75.5"></property>
+	 	<property name="direccion" ref="direccionLaura"></property>
+	 </bean>
+	 
+	 <bean id="listaPersonas" class="java.util.ArrayList"/>
+</beans>
+
+
+
